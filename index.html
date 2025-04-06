@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gwada Informatique - Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".faq-question").forEach(button => {
+                button.addEventListener("click", () => {
+                    const answer = button.nextElementSibling;
+                    answer.style.display = answer.style.display === "block" ? "none" : "block";
+                });
+            });
+
+            const backToTop = document.getElementById("backToTop");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 200) {
+                    backToTop.style.display = "block";
+                } else {
+                    backToTop.style.display = "none";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Gwada Informatique</div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <h1>Bienvenue chez Gwada Informatique</h1>
+        <p>Rien ne se jette, tout se répare !</p>
+        <a href="#services" class="btn">Nos services</a>
+    </section>
+
+    <section id="services">
+        <h2 style="text-align: center">Nos Services</h2>
+        <div class="services-container">
+            <div class="service card">
+                <img src="2022-05-26.jpg" alt="Réparation PC">
+                <h3>Réparation PC</h3>
+            </div>
+            <div class="service card">
+                <img src="téléchargement.jpg" alt="Réparation Nintendo Switch">
+                <h3>Réparation Nintendo Switch</h3>
+            </div>
+            <div class="service card">
+                <img src="téléchargement (1).jpg" alt="Maintenance informatique">
+                <h3>Maintenance informatique</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs">
+        <h2 style="text-align: center">Tarifs</h2>
+        <p style="text-align: center">Contactez-nous pour un devis gratuit.</p>
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="#contact" class="btn">Demander un devis</a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 style="text-align: center">FAQ</h2>
+        <div class="faq-item">
+            <button class="faq-question">Quels types d'appareils réparez-vous ?</button>
+            <div class="faq-answer">
+                <p>Nous réparons des PC, des Nintendo Switch, et d'autres appareils électroniques courants.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Offrez-vous une garantie ?</button>
+            <div class="faq-answer">
+                <p>Oui, toutes nos réparations sont garanties pendant 3 mois.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Combien de temps prend une réparation ?</button>
+            <div class="faq-answer">
+                <p>La plupart des réparations sont effectuées sous 48 heures.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 style="text-align: center">Témoignages</h2>
+        <div class="testimonial">
+            <p>"Service rapide et efficace ! Mon PC fonctionne comme neuf." – Marie</p>
+        </div>
+        <div class="testimonial">
+            <p>"Très satisfait de la réparation de ma Switch. Merci !" – Julien</p>
+        </div>
+    </section>
+    <section id="a-propos" class="about-section">
+        <h2 style="text-align: center;">Qui sommes-nous</h2>
+        <div class="about-container">
+            <p>
+                Faites confiance à un professionnel pour vos réparations.<br>
+                Diplômés et forts de 20 ans d'expérience, nous mettons nos compétences à votre service.
+            </p>
+            <p>
+                Nous intervenons pour : dépannage informatique (PC ou Mac), désinfection de virus, changement d'écran,
+                installation de matériel, création de site Web, etc. Nous réparons également smartphones et tablettes.
+            </p>
+    
+            <h3>Nos valeurs</h3>
+            <ul class="values-list">
+                <li><strong>Accessibilité :</strong> Aucune question n'est idiote. Nous sommes là pour vous aider, sans jugement.</li>
+                <li><strong>Pédagogie :</strong> Nous vous expliquons les choses simplement, sans jargon technique inutile.</li>
+                <li><strong>Confidentialité :</strong> Vos données sont personnelles. Leur protection est notre priorité.</li>
+                <li><strong>Transparence :</strong> Nous vous informons clairement. Si une réparation est irréalisable ou trop coûteuse, nous le disons.</li>
+                <li><strong>Conseils gratuits :</strong> Besoin d’un avis ? Nous partageons nos connaissances librement.</li>
+                <li><strong>Réparabilité avant remplacement :</strong> Beaucoup de pannes sont simples à réparer et coûtent moins cher qu’un appareil neuf.</li>
+                <li><strong>Écologie :</strong> Réparer, c’est lutter contre la surconsommation et préserver notre planète.</li>
+            </ul>
+    
+            <h3>Nos compétences en informatique</h3>
+            <ul class="skills-list">
+                <li>Diplômés en génie logiciel et matériel, avec 20 ans d’expérience.</li>
+                <li>Réparations sur PC portables et de bureau.</li>
+                <li>Systèmes : Windows, macOS, Linux.</li>
+                <li>Services : diagnostics, réparations logicielles et matérielles, remplacement de pièces, sauvegarde, récupération de données.</li>
+                <li>Marques couvertes : Acer, Asus, HP, Lenovo, et bien d'autres.</li>
+            </ul>
+    
+            <h3>Nos compétences en smartphones et tablettes</h3>
+            <ul class="skills-list">
+                <li>Remplacement de batterie, écran, connecteur de charge, carte mère.</li>
+                <li>Transfert de données, mises à jour, réinitialisation.</li>
+                <li>Déblocage Google.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>SMS : 06.90.92.63.84</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea rows="4" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        <p>&copy; 2025 Gwada Informatique. Tous droits réservés.</p>
+    </footer>
+
+    <button id="backToTop" title="Retour en haut">↑</button>
+</body>
+</html>
